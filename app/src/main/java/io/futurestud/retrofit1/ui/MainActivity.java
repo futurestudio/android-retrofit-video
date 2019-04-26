@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Retrofit retrofit = builder.build();
 
         GitHubClient client = retrofit.create(GitHubClient.class);
-        Call<List<GitHubRepo>> call = client.reposForUser("fs-opensource");
+        Call<List<GitHubRepo>> call = client.reposForUser("futurestudio");
 
         call.enqueue(new Callback<List<GitHubRepo>>() {
             @Override
